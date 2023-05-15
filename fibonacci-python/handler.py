@@ -3,7 +3,7 @@ def Fibonacci(n):
     # Check if input is 0 then it will
     # print incorrect input
     if n < 0:
-        print("Incorrect input")
+        raise ValueError("Incorrect input")
 
     # Check if n is 0
     # then it will return 0
@@ -24,5 +24,16 @@ def handle(req):
     Args:
         req (str): request body
     """
-    print(Fibonacci(int(req)))
+    """handle a request to the function
+    Args:
+        req (str): request body
+    """
+    try:
+        result = Fibonacci(int(req))
+        return str(result)
+    except ValueError as e:
+        return "Error (value error): " + str(e), 500
+    except Exception as e:
+        return "Error: " + str(e), 500
+
 

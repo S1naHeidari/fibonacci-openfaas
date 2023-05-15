@@ -7,20 +7,27 @@ functions:
   fibo1:
     lang: python
     handler: ./fibonacci-python
-    image: raycatcher/fibonacci-python:0.1
-    constraints: 
-    - "name=1"
-  fibo2:
-    lang: python
-    handler: ./fibonacci-python
-    image: raycatcher/fibonacci-python:0.1
+    image: raycatcher/fibonacci-python:0.11
+    labels:
+      com.openfaas.scale.min: 1
+      com.openfaas.scale.max: 1
     constraints:
-    - "name=2"
-    limits:
-      memory: 40Mi
-      cpu: 100m
+    - "kubernetes.io/group=2"
+      #limits:
+      #cpu: 200m
     requests:
-      memory: 20Mi
-      cpu: 100m
+      cpu: 100m  
+    #  fibo2:
+      # lang: python
+      #handler: ./fibonacci-python
+      #image: raycatcher/fibonacci-python:0.1
+      #constraints:
+      #- "name=2"
+      #limits:
+      # memory: 40Mi
+      # cpu: 100m
+      #requests:
+      # memory: 20Mi
+      # cpu: 100m
     
 
