@@ -18,6 +18,8 @@ functions:
       #cpu: 200m
     requests:
       cpu: 100m
+
+
   default-2:
     lang: python
     handler: ./fibonacci-python
@@ -47,6 +49,8 @@ functions:
       #cpu: 200m
     requests:
       cpu: 100m
+
+
   default-4:
     lang: python
     handler: ./fibonacci-python
@@ -76,7 +80,68 @@ functions:
       #cpu: 200m
     requests:
       cpu: 400m
+  
   default-6:
+    lang: python
+    handler: ./fibonacci-python
+    image: raycatcher/fibonacci-python:0.11
+    labels:
+      com.openfaas.scale.min: 1
+      com.openfaas.scale.max: 5
+      #com.openfaas.scale.factor: 0
+      #constraints:
+      #- "kubernetes.io/group=3"
+      #limits:
+      #cpu: 200m
+    requests:
+      cpu: 400m
+
+  default-7:
+    lang: python
+    handler: ./fibonacci-python
+    image: raycatcher/fibonacci-python:0.11
+    labels:
+      com.openfaas.scale.min: 1
+      com.openfaas.scale.max: 5
+      #com.openfaas.scale.factor: 0
+      #constraints:
+      #- "kubernetes.io/group=3"
+      #limits:
+      #cpu: 200m
+    requests:
+      cpu: 400m
+
+  default-8:
+    lang: python
+    handler: ./fibonacci-python
+    image: raycatcher/fibonacci-python:0.11
+    labels:
+      com.openfaas.scale.min: 1
+      com.openfaas.scale.max: 5
+      #com.openfaas.scale.factor: 0
+      #constraints:
+      #- "kubernetes.io/group=3"
+      #limits:
+      #cpu: 200m
+    requests:
+      cpu: 400m
+
+  default-9:
+    lang: python
+    handler: ./fibonacci-python
+    image: raycatcher/fibonacci-python:0.11
+    labels:
+      com.openfaas.scale.min: 1
+      com.openfaas.scale.max: 5
+      #com.openfaas.scale.factor: 0
+      #constraints:
+      #- "kubernetes.io/group=3"
+      #limits:
+      #cpu: 200m
+    requests:
+      cpu: 400m
+  
+  default-10:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
