@@ -4,7 +4,7 @@ provider:
   gateway: http://127.0.0.1:8080
 
 functions:
-  fibo1-1-h:
+  fibo-1-1-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
@@ -20,7 +20,7 @@ functions:
     limits:
       cpu: 1600m
       #memory: 1024M
-  fibo1-2-h:
+  fibo-1-2-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
@@ -38,7 +38,7 @@ functions:
       #memroy: 1024M
 
 
-  fibo2-1-h:
+  fibo-2-1-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
@@ -55,7 +55,7 @@ functions:
       cpu: 800m
       #memory: 512M
 
-  fibo2-2-h:
+  fibo-2-2-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
@@ -72,7 +72,7 @@ functions:
       cpu: 800m
       #memory: 512M
   
-  fibo3-1-h:
+  fibo-3-1-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
@@ -89,7 +89,7 @@ functions:
       cpu: 400
      
             
-  fibo3-2-h:
+  fibo-3-2-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11

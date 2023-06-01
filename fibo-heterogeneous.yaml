@@ -8,9 +8,9 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: fibo1-1-h
+    name: fibo-1-1-h
   minReplicas: 1
-  maxReplicas: 4
+  maxReplicas: 5
   metrics:
   - type: Resource
     resource:
@@ -36,9 +36,9 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: fibo1-2-h
+    name: fibo-1-2-h
   minReplicas: 1
-  maxReplicas: 4
+  maxReplicas: 5
   metrics:
   - type: Resource
     resource:
@@ -65,9 +65,9 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: fibo2-1-h
+    name: fibo-2-1-h
   minReplicas: 1
-  maxReplicas: 3
+  maxReplicas: 5
   metrics:
   - type: Resource
     resource:
@@ -94,9 +94,9 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: fibo2-2-h
+    name: fibo-2-2-h
   minReplicas: 1
-  maxReplicas: 3
+  maxReplicas: 5
   metrics:
   - type: Resource
     resource:
@@ -123,7 +123,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: fibo3-1-h
+    name: fibo-3-1-h
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -152,7 +152,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: fibo3-2-h
+    name: fibo-3-2-h
   minReplicas: 1
   maxReplicas: 5
   metrics:

@@ -7,7 +7,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-1
+    name: default-2-1
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -36,7 +36,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-2
+    name: default-2-2
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -65,7 +65,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-3
+    name: default-2-3
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -94,7 +94,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-4
+    name: default-2-4
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -123,7 +123,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-5
+    name: default-2-5
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -152,7 +152,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-6
+    name: default-2-6
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -179,7 +179,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-7
+    name: default-2-7
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -206,7 +206,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-8
+    name: default-2-8
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -233,7 +233,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-9
+    name: default-2-9
   minReplicas: 1
   maxReplicas: 5
   metrics:
@@ -260,7 +260,62 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: default-1-10
+    name: default-2-10
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 80
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 60
+      policies:
+      - type: Percent
+        value: 10
+        periodSeconds: 60
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: default-11-hpa
+  namespace: openfaas-fn
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: default-2-11
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 80
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 60
+      policies:
+      - type: Percent
+        value: 10
+        periodSeconds: 60
+
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: default-12-hpa
+  namespace: openfaas-fn
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: default-2-12
   minReplicas: 1
   maxReplicas: 5
   metrics:
