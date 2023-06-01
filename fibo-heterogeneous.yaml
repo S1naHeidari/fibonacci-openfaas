@@ -10,7 +10,7 @@ spec:
     kind: Deployment
     name: fibo1-1-h
   minReplicas: 1
-  maxReplicas: 5
+  maxReplicas: 4
   metrics:
   - type: Resource
     resource:
@@ -38,7 +38,7 @@ spec:
     kind: Deployment
     name: fibo1-2-h
   minReplicas: 1
-  maxReplicas: 5
+  maxReplicas: 4
   metrics:
   - type: Resource
     resource:
@@ -59,34 +59,6 @@ spec:
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: fibo1-3h-hpa
-  namespace: openfaas-fn
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: fibo1-3-h
-  minReplicas: 1
-  maxReplicas: 5
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 80
-  behavior:
-    scaleDown:
-      stabilizationWindowSeconds: 60
-      policies:
-      - type: Percent
-        value: 10
-        periodSeconds: 240
----
-
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
-metadata:
   name: fibo2-1h-hpa
   namespace: openfaas-fn
 spec:
@@ -95,7 +67,7 @@ spec:
     kind: Deployment
     name: fibo2-1-h
   minReplicas: 1
-  maxReplicas: 5
+  maxReplicas: 3
   metrics:
   - type: Resource
     resource:
@@ -108,7 +80,7 @@ spec:
       stabilizationWindowSeconds: 60
       policies:
       - type: Percent
-        value: 10
+        value: 3
         periodSeconds: 240
 
 ---
@@ -124,7 +96,7 @@ spec:
     kind: Deployment
     name: fibo2-2-h
   minReplicas: 1
-  maxReplicas: 5
+  maxReplicas: 3
   metrics:
   - type: Resource
     resource:

@@ -8,79 +8,100 @@ functions:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
+    image_pull_policy: Never
     labels:
       com.openfaas.scale.min: 1
-      com.openfaas.scale.max: 5
+      com.openfaas.scale.max: 1
     constraints:
     - "kubernetes.io/group=2"
     requests:
       cpu: 1600m
+      #memory: 512M
+    limits:
+      cpu: 1600m
+      #memory: 1024M
   fibo1-2-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
+    image_pull_policy: Never
     labels:
       com.openfaas.scale.min: 1
-      com.openfaas.scale.max: 5
+      com.openfaas.scale.max: 1
     constraints:
     - "kubernetes.io/group=2"
     requests:
       cpu: 1600m
+      #memory: 512M
+    limits: 
+      cpu: 1600m
+      #memroy: 1024M
 
-  fibo1-3-h:
-    lang: python
-    handler: ./fibonacci-python
-    image: raycatcher/fibonacci-python:0.11
-    labels:
-      com.openfaas.scale.min: 1
-      com.openfaas.scale.max: 5
-    constraints:
-    - "kubernetes.io/group=2"
-    requests:
-      cpu: 1600m
 
   fibo2-1-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
+    image_pull_policy: Never
     labels:
       com.openfaas.scale.min: 1
-      com.openfaas.scale.max: 5
+      com.openfaas.scale.max: 1
     constraints:
     - "kubernetes.io/group=3"
     requests:
       cpu: 800m
+      #memory: 256M
+    limits:
+      cpu: 800m
+      #memory: 512M
+
   fibo2-2-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
+    image_pull_policy: Never
     labels:
       com.openfaas.scale.min: 1
-      com.openfaas.scale.max: 5
+      com.openfaas.scale.max: 1
     constraints:
     - "kubernetes.io/group=3"
     requests:
-      cpu: 800m  
+      cpu: 800m 
+      #memory: 256M
+    limits: 
+      cpu: 800m
+      #memory: 512M
   
   fibo3-1-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
+    image_pull_policy: Never
     labels:
       com.openfaas.scale.min: 1
-      com.openfaas.scale.max: 5
+      com.openfaas.scale.max: 1
     constraints:
     - "kubernetes.io/group=1"
     requests:
       cpu: 400m
+      #memory: 128M
+    limits:
+      cpu: 400
+     
+            
   fibo3-2-h:
     lang: python
     handler: ./fibonacci-python
     image: raycatcher/fibonacci-python:0.11
+    image_pull_policy: Never
     labels:
       com.openfaas.scale.min: 1
-      com.openfaas.scale.max: 5
+      com.openfaas.scale.max: 1
     constraints:
     - "kubernetes.io/group=1"
     requests:
       cpu: 400m
+      #memory: 128M
+    limits:
+      limit: 400m
+      #memory: 256M

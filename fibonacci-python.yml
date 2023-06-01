@@ -93,6 +93,36 @@ functions:
     requests:
       cpu: 400m
 
+  fibo1-7:
+    lang: python
+    handler: ./fibonacci-python
+    image: raycatcher/fibonacci-python:0.11
+    labels:
+      com.openfaas.scale.min: 1
+      com.openfaas.scale.max: 5
+      #com.openfaas.scale.factor: 0
+    constraints:
+    - "kubernetes.io/group=2"
+      #limits:
+      #cpu: 200m
+    requests:
+      cpu: 400m
+
+  fibo1-8:
+    lang: python
+    handler: ./fibonacci-python
+    image: raycatcher/fibonacci-python:0.11
+    labels:
+      com.openfaas.scale.min: 1
+      com.openfaas.scale.max: 5
+      #com.openfaas.scale.factor: 0
+    constraints:
+    - "kubernetes.io/group=2"
+      #limits:
+      #cpu: 200m
+    requests:
+      cpu: 400m
+
   fibo2-1:
     lang: python
     handler: ./fibonacci-python
