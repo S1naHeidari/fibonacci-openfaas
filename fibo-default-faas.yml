@@ -14,8 +14,10 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
       #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
 
@@ -30,8 +32,10 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
       #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
 
@@ -45,8 +49,10 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
             #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
 
@@ -61,8 +67,10 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
             #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
   
@@ -76,8 +84,10 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
       #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
   
@@ -91,8 +101,10 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
       #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
 
@@ -106,8 +118,11 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
       #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
+
     requests:
       cpu: 400m
 
@@ -121,8 +136,10 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
       #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
 
@@ -136,8 +153,10 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
       #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
   
@@ -152,8 +171,10 @@ functions:
       #constraints:
       #- "kubernetes.io/group=3"
       #limits:
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
 
@@ -167,8 +188,10 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
       #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m
   
@@ -182,7 +205,9 @@ functions:
       #com.openfaas.scale.factor: 0
       #constraints:
       #- "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
+    environment:
+      read_timeout: 65 # seconds
+      write_timeout: 65 # seconds
+      exec_timeout: 0 # disable
     requests:
       cpu: 400m

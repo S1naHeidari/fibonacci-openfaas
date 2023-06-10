@@ -277,6 +277,7 @@ spec:
       - type: Percent
         value: 10
         periodSeconds: 60
+---
 
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -304,7 +305,7 @@ spec:
       - type: Percent
         value: 10
         periodSeconds: 60
-
+---
 
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -332,3 +333,4 @@ spec:
       - type: Percent
         value: 10
         periodSeconds: 60
+---

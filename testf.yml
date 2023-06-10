@@ -1,0 +1,18 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  fobooo:
+    lang: python
+    #handler: ./fibonacci-python
+    image: raycatcher/fibonacci-python:0.11
+    labels:
+      com.openfaas.scale.min: 1
+      com.openfaas.scale.max: 1
+      #com.openfaas.scale.factor: 0
+      #constraints:
+      #- "kubernetes.io/group=3"
+    requests:
+      cpu: 400m

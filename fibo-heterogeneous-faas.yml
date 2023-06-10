@@ -12,14 +12,21 @@ functions:
     labels:
       com.openfaas.scale.min: 1
       com.openfaas.scale.max: 1
+    skip_build: true
+    annotations:
+      com.openfaas.ready.http.path: "/_/ready"
+      com.openfaas.ready.http.initialDelaySeconds: 30
+      com.openfaas.ready.http.periodSeconds: 60
+      com.openfaas.health.http.path: "/_/health"
+      com.openfaas.health.http.initialDelaySeconds: 30
+      com.openfaas.health.http.periodSeconds: 60
     constraints:
     - "kubernetes.io/group=2"
     requests:
       cpu: 1600m
       #memory: 512M
-    limits:
-      cpu: 1600m
       #memory: 1024M
+      #
   fibo-1-2-h:
     lang: python
     handler: ./fibonacci-python
@@ -28,13 +35,19 @@ functions:
     labels:
       com.openfaas.scale.min: 1
       com.openfaas.scale.max: 1
+    skip_build: true
+    annotations:
+      com.openfaas.ready.http.path: "/_/ready"
+      com.openfaas.ready.http.initialDelaySeconds: 30
+      com.openfaas.ready.http.periodSeconds: 60
+      com.openfaas.health.http.path: "/_/health"
+      com.openfaas.health.http.initialDelaySeconds: 30
+      com.openfaas.health.http.periodSeconds: 60
     constraints:
     - "kubernetes.io/group=2"
     requests:
       cpu: 1600m
       #memory: 512M
-    limits: 
-      cpu: 1600m
       #memroy: 1024M
 
 
@@ -46,13 +59,19 @@ functions:
     labels:
       com.openfaas.scale.min: 1
       com.openfaas.scale.max: 1
+    skip_build: true
+    annotations:
+      com.openfaas.ready.http.path: "/_/ready"
+      com.openfaas.ready.http.initialDelaySeconds: 30
+      com.openfaas.ready.http.periodSeconds: 60
+      com.openfaas.health.http.path: "/_/health"
+      com.openfaas.health.http.initialDelaySeconds: 30
+      com.openfaas.health.http.periodSeconds: 60
     constraints:
     - "kubernetes.io/group=3"
     requests:
       cpu: 800m
       #memory: 256M
-    limits:
-      cpu: 800m
       #memory: 512M
 
   fibo-2-2-h:
@@ -63,13 +82,19 @@ functions:
     labels:
       com.openfaas.scale.min: 1
       com.openfaas.scale.max: 1
+    skip_build: true
+    annotations:
+      com.openfaas.ready.http.path: "/_/ready"
+      com.openfaas.ready.http.initialDelaySeconds: 30
+      com.openfaas.ready.http.periodSeconds: 60
+      com.openfaas.health.http.path: "/_/health"
+      com.openfaas.health.http.initialDelaySeconds: 30
+      com.openfaas.health.http.periodSeconds: 60
     constraints:
     - "kubernetes.io/group=3"
     requests:
       cpu: 800m 
       #memory: 256M
-    limits: 
-      cpu: 800m
       #memory: 512M
   
   fibo-3-1-h:
@@ -80,13 +105,19 @@ functions:
     labels:
       com.openfaas.scale.min: 1
       com.openfaas.scale.max: 1
+    skip_build: true
+    annotations:
+      com.openfaas.ready.http.path: "/_/ready"
+      com.openfaas.ready.http.initialDelaySeconds: 30
+      com.openfaas.ready.http.periodSeconds: 60
+      com.openfaas.health.http.path: "/_/health"
+      com.openfaas.health.http.initialDelaySeconds: 30
+      com.openfaas.health.http.periodSeconds: 60
     constraints:
     - "kubernetes.io/group=1"
     requests:
       cpu: 400m
       #memory: 128M
-    limits:
-      cpu: 400
      
             
   fibo-3-2-h:
@@ -97,11 +128,17 @@ functions:
     labels:
       com.openfaas.scale.min: 1
       com.openfaas.scale.max: 1
+    skip_build: true
+    annotations:
+      com.openfaas.ready.http.path: "/_/ready"
+      com.openfaas.ready.http.initialDelaySeconds: 30
+      com.openfaas.ready.http.periodSeconds: 60
+      com.openfaas.health.http.path: "/_/health"
+      com.openfaas.health.http.initialDelaySeconds: 30
+      com.openfaas.health.http.periodSeconds: 60
     constraints:
     - "kubernetes.io/group=1"
     requests:
       cpu: 400m
       #memory: 128M
-    limits:
-      limit: 400m
       #memory: 256M

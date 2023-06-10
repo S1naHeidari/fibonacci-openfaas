@@ -80,7 +80,7 @@ spec:
       stabilizationWindowSeconds: 60
       policies:
       - type: Percent
-        value: 3
+        value: 10
         periodSeconds: 240
 
 ---

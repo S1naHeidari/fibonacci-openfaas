@@ -15,8 +15,6 @@ functions:
     constraints:
     - "kubernetes.io/group=2"
       #limits:
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -31,8 +29,6 @@ functions:
     constraints:
     - "kubernetes.io/group=2"
       #limits:
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -47,8 +43,6 @@ functions:
     constraints:
     - "kubernetes.io/group=2"
       #limits:
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -63,8 +57,6 @@ functions:
     constraints:
     - "kubernetes.io/group=2"
       #limits:
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -79,8 +71,6 @@ functions:
     constraints:
     - "kubernetes.io/group=2"
       #limits:
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -95,8 +85,6 @@ functions:
     constraints:
     - "kubernetes.io/group=2"
       #limits:
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -111,8 +99,6 @@ functions:
     constraints:
     - "kubernetes.io/group=2"
       #limits:
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -122,12 +108,10 @@ functions:
     image: raycatcher/fibonacci-python:0.11
     labels:
       com.openfaas.scale.min: 1
-      com.openfaas.scale.max: 5
+      com.openfaas.scale.max: 1
       #com.openfaas.scale.factor: 0
     constraints:
     - "kubernetes.io/group=2"
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -141,8 +125,6 @@ functions:
       #com.openfaas.scale.factor: 0
     constraints:
     - "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -157,8 +139,6 @@ functions:
       #com.openfaas.scale.factor: 0
     constraints:
     - "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
 
@@ -172,8 +152,6 @@ functions:
       #com.openfaas.scale.factor: 0
     constraints:
     - "kubernetes.io/group=3"
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m    
 
@@ -188,8 +166,6 @@ functions:
     constraints:
     - "kubernetes.io/group=3"
       #limits:
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m    
   
@@ -217,7 +193,5 @@ functions:
       #com.openfaas.scale.factor: 0
     constraints:
     - "kubernetes.io/group=1"
-    limits:
-      cpu: 400m
     requests:
       cpu: 400m   
